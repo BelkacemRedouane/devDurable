@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exigences techniques en termes de sobriété numérique pour une solution SaaS">
+    <title>Appel d'offre : Sobriété numérique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+    
+        body,
+        h1,
+        h2,
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+      
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+      
+        section {
+            margin: 20px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        
+        }
+
+        h2 {
+            color: #0056b3;
+        }
+
+       
+        .toggle-answer {
+            background: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            
+        }
+
+        .toggle-answer:hover {
+            background: #004080;
+
+        }
+        
+        article {
+            line-height: 1.8; 
+        }
+
+        ul {
+            list-style: none; 
+            padding-left: 20px; 
+        }
+
+        ul li::before {
+            content: '• '; 
+            color: #0056b3; 
+            font-weight: bold; 
+        }
+
+        .answer {
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+       
+        .answer:not(.show) {
+            max-height: 0;
+            padding: 0 20px; 
+        }
+       
+        .section {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            transition: box-shadow 0.3s ease; 
+        }
+
+        .section:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+        }
+
+       
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+        }
+
+        
+        .toggle-answer:focus {
+            outline: none; 
+            box-shadow: 0 0 0 2px white, 0 0 0 4px #0056b3; 
+        }
+        
+
+        
+        #accessibilityBtn {
+            font-size: 1rem;
+            background: #f9f9f9;
+            border: 2px solid #0056b3;
+            border-radius: 5px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 20px; 
+        }
+
+        #accessibilityBtn:hover {
+            background: #e8e8e8;
+        }
+
+        #accessibilityBtn i {
+            margin-right: 5px;
+            color: #0056b3;
+        }
+
+        
+        .accessibility-mode {
+            font-size: larger; 
+            color: black;
+            background-color: white;
+        }
+
+        .container h1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        i.fas.fa-universal-access {
+            color: #0056b3; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Exigences de Sobriété Numérique pour Solution SaaS</h1>
+            <button id="accessibilityBtn" onclick="toggleAccessibilityMode()" aria-label="Activer le mode d'accessibilité"
+                style="margin-left: auto;">
+                <i class="fas fa-universal-access"></i> Mode d'accessibilité
+            </button>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <section>
+            <h2>1. Votre entreprise a décidé d’acquérir une solution SaaS pour son portail de statistiques auprès d’un éditeur et vous devez
+            rédiger dans l’appel d’offre la partie sur les exigences techniques en termes de sobriété numérique. Listez les critères
+            qui vous semblent non négociables sous forme de user stories fictives. (exemple : en tant qu’éditeur je dois m’assurer
+            que ma solution est hébergée sur un serveur localisé en France afin de…)</h2>
+            <button class="toggle-answer" data-target="answer1">Afficher la Réponse</button>
+            <div id="answer1" class="answer" style="display:none;">
+                <article>
+                    <p><strong>En tant qu'éditeur, je dois m'assurer que ma solution est hébergée sur un serveur localisé en France
+                            afin de m’assurer de :</strong></p>
+                    <ul>
+                        <li>La conformité avec le RGPD de l'UE, évitant les risques légaux et renforçant la protection de la vie
+                            privée.</li>
+                        <li>L'hébergement local réduit la distance de transfert des données, minimisant ainsi la consommation
+                            énergétique et l'empreinte carbone.</li>
+                    </ul>
+                    <p><strong>En tant qu'éditeur, je m'engage à implémenter des algorithmes d'optimisation des données afin de
+                            :</strong></p>
+                    <ul>
+                        <li>Minimiser la quantité de données transférées et stockées, garantissant ainsi une solution à la fois
+                            efficace et écoresponsable.</li>
+                    </ul>
+                    <p><strong>En tant qu'éditeur, j’alimente mes centres de données avec des énergies renouvelables et qui ont
+                            prouvé leur efficacité énergétique, afin de :</strong></p>
+                    <ul>
+                        <li>Minimiser l'impact environnemental de notre infrastructure IT.</li>
+                    </ul>
+                    <p><strong>En tant qu'éditeur, je m’engage à faciliter la suppression ou l'archivage des données inutiles des
+                            utilisateurs, afin de :</strong></p>
+                    <ul>
+                        <li>Réduire l'espace de stockage nécessaire et l'empreinte carbone associée.</li>
+                    </ul>
+                    <p><strong>En tant qu'éditeur, je garantirai que notre solution est accessible à tous les utilisateurs, y
+                            compris ceux avec des connexions internet lentes ou des appareils moins performants, en optimisant les
+                            performances et en proposant des options de qualité adaptative, pour :</strong></p>
+                    <ul>
+                        <li>Encourager les utilisateurs à prolonger l'usage de leurs équipements, réduisant ainsi les déchets
+                            électroniques et la demande en ressources.</li>
+                        <li>Réduire la bande passante nécessaire, diminuant ainsi la consommation d'énergie et l'impact
+                            environnemental du transfert et traitement de données.</li>
+                    </ul>
+                </article>
+            </div>
+            
+        </section>
+        <section>
+            <h2>2. Quels éléments de l’UE « Développement durable » allez-vous utiliser dans votre alternance (pour les personnes qui ont
+            trouvé) et/ou votre vie étudiante (pour les personnes sans alternance) ?</h2>
+            <button class="toggle-answer" data-target="answer2">Afficher la Réponse</button>
+            <div id="answer2" class="answer" style="display:none;">
+                <p>En tant que développeur, je m'engage à :</p>
+                <ul>
+                    <li>Optimiser les requêtes pour réduire le temps de traitement et la consommation d'énergie.</li>
+                    <li>Automatiser les processus pour éviter les erreurs et les traitements redondants, minimisant ainsi
+                        l'usage des ressources.</li>
+                    <li>Recycler et réutiliser le code autant que possible pour une programmation plus efficiente.</li>
+                </ul>
+                <p>En travaillant sur des projets de développement d'ETL chez Crédit Agricole, j'appliquerai :</p>
+                <ul>
+                    <li>Optimisation des processus ETL pour minimiser l'utilisation de ressources et la consommation
+                        d'énergie.</li>
+                    <li>Implémentation de mesures de sécurité pour protéger les données et éviter des traitements superflus,
+                        contribuant à une utilisation économe et sécurisée des ressources informatiques.</li>
+                </ul>
+            </div>
+            
+        </section>
+        <section>
+            <h2>3. Comment évaluez-vous la maturité de sobriété numérique de votre organisation ? (ou d’une autre organisation si pas
+            encore d’alternance). Détaillez les actions déjà mises en œuvre et ce qu’il faudrait selon vous améliorer.</h2>
+            <button class="toggle-answer" data-target="answer3">Afficher la Réponse</button>
+            <div id="answer3" class="answer" style="display:none;">
+                <p>La maturité de sobriété numérique de Crédit Agricole est illustrée par :</p>
+                <ul>
+                    <li><strong>ÉcoCode Challenge :</strong> Enrichir SonarQube pour encourager une programmation
+                        responsable.</li>
+                    <li><strong>Mise en œuvre de plugins sur SonarQube :</strong> Développer des solutions Open Source pour
+                        une approche collaborative.</li>
+                    <li><strong>Politique de rétention des e-mails :</strong> Établir une politique de conservation des
+                        e-mails pour éviter la surcharge d'information.</li>
+                    <li><strong>Sensibilisation des employés :</strong> Former les employés sur l'importance de l'archivage
+                        et encourager la suppression régulière des e-mails inutiles.</li>
+                    <li><strong>Optimisation de l'éclairage et du chauffage :</strong> Adapter les horaires et réguler les
+                        températures dans les bâtiments pour une utilisation plus économe en énergie.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>4. Storytelling. Racontez comment imaginez-vous le numérique en 2050.</h2>
+            <button class="toggle-answer" data-target="answer4">Afficher la Réponse</button>
+            <div id="answer4" class="answer" style="display:none;">
+                <p>En 2050, je vois un monde numérique allié de l'environnement où :</p>
+                <ul>
+                    <li>Les villes produiront leur propre énergie et les gadgets seront plus robustes et économes.</li>
+                    <li>Nos habitudes auront évolué pour protéger la nature, favorisant les énergies propres et des
+                        bâtiments éco-responsables.</li>
+                    <li>Les technologies seront accessibles à tous, rendant la vie plus facile tout en étant respectueuses
+                        de la planète.</li>
+                    <li>Les entreprises innoveront en prenant soin de la nature, intégrant la durabilité dans toutes leurs
+                        créations.</li>
+                </ul>
+            </div>
+            
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            © 2024 - Engagement pour une IT durable
+        </div>
+    </footer>
+    <script>
+        function toggleAnswer(targetId) {
+                var answer = document.getElementById(targetId);
+                if (answer.classList.contains('show')) {
+                    answer.classList.remove('show');
+                    setTimeout(() => { 
+                        answer.style.display = "none";
+                    }, 500); 
+                } else {
+                    answer.style.display = "block";
+                    setTimeout(() => { 
+                        answer.classList.add('show');
+                    }, 10);
+                }
+            }
+
+        document.querySelectorAll('.toggle-answer').forEach(button => {
+            button.addEventListener('click', function () {
+                var targetId = this.getAttribute('data-target');
+                toggleAnswer(targetId);
+            });
+        });
+
+        var isAccessibilityMode = false; 
+
+            function toggleAccessibilityMode() {
+                var body = document.body;
+                if (isAccessibilityMode) {
+                    body.classList.remove('accessibility-mode');
+                    isAccessibilityMode = false;
+                } else {
+                    body.classList.add('accessibility-mode');
+                    isAccessibilityMode = true;
+                }
+            }
+    </script>
+</body>
+
+</html>
